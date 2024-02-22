@@ -1,25 +1,24 @@
 <template>
-  <div class="countdown-timer">
-    <div v-if="timeLeft" class="time">
-      <span>{{ time.days }}</span> Days
-      <span>{{ time.hours }}</span> Hours
-      <span>{{ time.minutes }}</span> Minutes
-      <span>{{ time.seconds }}</span> Seconds
-    </div>
-    <div v-else class="expired">
-      Time's up!
+  <div>
+    <Head>
+      <Title>GiduFest</Title>
+    </Head>
+    <div class="countdown-timer">
+      <div v-if="timeLeft" class="time">
+        <span>{{ time.days }}</span> Days
+        <span>{{ time.hours }}</span> Hours
+        <span>{{ time.minutes }}</span> Minutes
+        <span>{{ time.seconds }}</span> Seconds
+      </div>
+      <div v-else class="expired">
+        Time's up!
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    targetDate: {
-      type: String,
-      required: true
-    }
-  },
   data() {
     return {
       timeLeft: true,

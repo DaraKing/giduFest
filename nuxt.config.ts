@@ -4,4 +4,7 @@ export default defineNuxtConfig({
   css: [
     '~/assets/css/main.css' // Path to your global CSS file
   ],
+  head: {
+    title: 'GiduFest',
+  },
 })
